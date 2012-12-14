@@ -1,1 +1,13 @@
-<%= 1+1 %>
+<p id="notice"><%= notice %></p>
+<h1>All Events</h1>
+<% if !@events.nil? %>
+	<ul>
+		<% @events.each do |e| %>
+		<li><%= e.title %></li>
+		<% end %>
+	</ul>
+<% else %>
+  <p>
+   No Events found
+  </p>
+<% end %>
