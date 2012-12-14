@@ -1,4 +1,4 @@
-class Events < ActiveRecord::Base
+class Event < ActiveRecord::Base
   attr_accessible :title, :content
 end
 

@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	def index
-		
+		@events = Event.all
 	end
 
 	def new
@@ -14,5 +14,9 @@ class EventsController < ApplicationController
 		else
 			redirect_to :root, :notice => "Failed to create a event"
 		end
+	end
+
+	def show
+		@event = Event.find(params[:id])
 	end
 end
