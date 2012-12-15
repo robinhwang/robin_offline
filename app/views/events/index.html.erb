@@ -1,6 +1,21 @@
 <p id="notice"><%= notice %></p>
-<%= link_to "create new event", new_event_path %>
-<h1>All Events</h1>
+
+<div class="hero">
+	<p>
+		We meet every Sunday coding <b>Web</b> have fun
+	</p>
+
+	<p class="hero-links">
+		<%= link_to "create new events", new_event_path %>
+		<br>
+		<%= link_to "about us", "#" %>
+		<br>
+		<%= link_to "join us", "#" %>
+		<br>
+	</p>
+</div>
+
+<h2>All events</h2>
 <% if !@events.nil? %>
 	<ul>
 		<% @events.each do |e| %>
