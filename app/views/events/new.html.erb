@@ -1,5 +1,12 @@
-<%= form_for @events do |f| %>
+<%= form_for @event do |f| %>
  <%= f.label :title %>
+ <br>
+ <%= f.text_field :title %>
+ <br>
+ <%= f.datetime_select :time,
+ 			:required => false,
+ 			:default => @default_time,
+ 			:discard_hour => true    %>
  <br>
  <%= f.label :content %>
  <br>
