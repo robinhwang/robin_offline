@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 
 	def new
 		@event = Event.new
-		@default_time = Event.last.time.nil? ? Time.now : Event.last.time + 7.days
+		@default_time = Event.last.nil? ? Time.now : Event.last.time + 7.days
 	end
 
 	def create

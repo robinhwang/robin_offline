@@ -21,7 +21,7 @@
 <% if !@events.nil? %>
 		<% @events.each do |e| %>
 		<li>
-			<a href="/events/"></a>
+			<a href="/events/<%= e.id %>"></a>
 			<i><%= e.time %></i>
 			<h3><%= link_to e.title, e %></h3>
 		</li>
